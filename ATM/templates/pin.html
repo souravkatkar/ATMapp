@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class=" text-center text-dark bg-info">Welcome, {{customer}}</h2>
+<form action="/options" method="POST">
+    {% csrf_token %} {% if error%}
+    <div class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
+    {% endif %}
+
+
+
+    <div class="form-group mt-1 p-4 text-center">
+        <label for="" class=" mx-5 mt-5 mb-5 "><h3>Enter Your PIN</h3></label>
+        <input required type="password" name="pin" class="form-control mb-5" placeholder="">
+    </div>
+
+
+
+
+
+</form>
+
+
+{% endblock %}

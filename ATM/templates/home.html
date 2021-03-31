@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<h2 class="alert alert-light text-center text-dark bg-info">ATM</h2>
+<form action="/pin" method="POST">{% csrf_token %} {% if error%}
+    <div class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
+    {% endif %}
+
+
+
+
+    <div class="form-group mt-5 p-4">
+        <label for="" class=" mx-5 mt-1 mb-5"><h3>Enter Your Account Number</h3></label>
+        <input required type="text" name="account_no" class="form-control mb-5" placeholder="">
+    </div>
+
+
+
+
+
+</form>
+
+
+
+{% endblock %}
